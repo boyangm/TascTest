@@ -1,0 +1,11 @@
+<section class = 'shoppingList'>
+  <h3>{{data.title}}</h3>
+  <ul>
+    <li *ngFor="let item of data?.items">
+      <app-item [data]= "item"></app-item>
+      <button (click) = "handleRemove(item)"> remove</button>
+    </li>
+  </ul>
+  <p>{{data.salesTax}}</p>
+  <p>{{data.importTax}}</p>
+</section>
